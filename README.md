@@ -3,6 +3,7 @@ This pipeline extracts multi-unit activity in the form of spikeband power, check
 
 ## Dependencies
 [Fast ICA](https://research.ics.aalto.fi/ica/fastica/)
+
 [Epoch Proc](https://github.com/whitepine/epoch_proc) <--Key functions already included in MUA library
 
 ## Functions
