@@ -93,7 +93,7 @@ for z=1:n_batch
     if z == 1  %only assess for the first batch!
         %remove artifact
         rcfg.n = 2; rcfg.audio_ch = audio_ch;
-        %[Trm,An,W] = remove_artifact(Trm,rcfg); %ica
+        [Trm,An,W] = remove_artifact(Trm,rcfg); %ica
         %rcfg.n = 4; rcfg.audio_ch = audio_ch; 
         %[Trm,H] = remove_artifact3(Trm,[],rcfg); %weiner filter
         %ccfg = []; ccfg.skp_cnt = 4; ccfg.thres = cc_thres; 
@@ -109,7 +109,7 @@ for z=1:n_batch
     
     %% low pass filter
     
-    if 0 %just loading hfp data
+    if 1 %just loading hfp data
     ecfg = [];
     ecfg.range = filter_range;
     ecfg.invert = 0;
